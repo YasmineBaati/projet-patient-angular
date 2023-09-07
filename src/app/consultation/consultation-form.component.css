@@ -1,0 +1,39 @@
+/* Your existing sidebar and dashboard CSS */
+.dashboard {
+    height: 100vh;
+}
+.row {
+    height: 100%;
+}
+.custom-sidebar {
+    background-color: #dbf3ef !important;
+}
+.custom-sidebar .nav-item {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.custom-sidebar .nav-link {
+    color: #01b99a !important;
+}
+
+/* New CSS for layout */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header {
+  flex: 0;
+}
+.content-wrapper {
+  flex: 1;
+  display: flex;
+}
+.sidebar {
+  flex: 0 0 200px;
+}
+.main-content {
+  flex: 1;
+}

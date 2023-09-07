@@ -1,0 +1,65 @@
+<style>
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* or you can set a specific height you prefer */
+        background-color: rgb(178, 190, 193);
+        /* gray color */
+    }
+
+    .inner-container {
+        width: 30%;
+        /* adjust this if you want a wider or narrower form */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+        /* to make the actual form stand out against the gray background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* optional: add a little shadow for depth */
+    }
+</style>
+<div class="centered-container">
+    <div class="inner-container">
+        <div class="container mt-5">
+            <h3>Questionnaire Form</h3>
+            <div *ngFor="let question of questions; let i = index">
+                <!-- Only display the current question -->
+                <div *ngIf="i === currentQuestionIndex" class="form-group">
+                    <label>{{ question.text }}</label>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" [name]="'question' + question.id"
+                            id="'yes' + question.id" value="yes" (change)="onRadioChange('yes')"
+                            [(ngModel)]="selectedOption">
+                        <label class="form-check-label" [for]="'yes' + question.id">Yes</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" [name]="'question' + question.id"
+                            id="'no' + question.id" value="no" (change)="onRadioChange('no')"
+                            [(ngModel)]="selectedOption">
+                        <label class="form-check-label" [for]="'no' + question.id">No</label>
+                    </div>
+
+                    <!-- Display the textarea if 'selectedOption' is 'yes' -->
+                    <div *ngIf="selectedOption === 'yes'" class="form-group">
+                        <label for="'textarea' + question.id">Additional Information:</label>
+                        <textarea class="form-control" id="'textarea' + question.id" [name]="'question' + question.id"
+                            rows="4" [(ngModel)]="questionResponses['question' + question.id]"
+                            (ngModelChange)="onTextareaChange(question.id, questionResponses['question' + question.id])"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button *ngIf="currentQuestionIndex > 0" (click)="onPrev()" class="btn btn-secondary mr-3">Previous</button>
+            <button *ngIf="currentQuestionIndex < questions.length - 1" (click)="onNext()"
+                class="btn btn-primary mr-3">Next</button>
+            <button *ngIf="currentQuestionIndex === questions.length - 1" (click)="onSubmit()"
+                class="btn btn-success">Submit</button>
+
+
+        </div>
+    </div>
+</div>

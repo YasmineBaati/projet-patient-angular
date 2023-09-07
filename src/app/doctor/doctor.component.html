@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="dashboard">
+
+  <div class="header">
+    <!-- Navbar component -->
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="content-wrapper row">
+    <div class="sidebar custom-sidebar">
+      <!-- Sidebar component -->
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-content">
+      <!-- Main Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main-box clearfix">
+              <div class="table-responsive">
+                <table class="table user-list">
+                  <thead>
+                    <!-- <tr>
+                      <th><span>Full Name</span></th>
+                      <th><span>Date</span></th>
+                      <th class="text-center"><span>Price</span></th>
+                      <th><span>Email</span></th>
+                      <th><span>Consultation Times</span></th>
+                    </tr> -->
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let doctor of doctors">
+                      <td>
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                        <a href="#" class="user-link">{{doctor.firstName}} {{doctor.lastName}}</a>
+                        <span class="user-subhead">{{doctor.proficiency}}</span>
+                      </td>
+                      <td>
+                        {{doctor.createdAt}}
+                      </td>
+                      <td class="text-center">
+                        <span class="label label-default">{{doctor.price}}</span>
+                      </td>
+                      <td>
+                        <a href="#">{{doctor.email}}</a>
+                      </td>
+                      <td>
+                        <div *ngFor="let time of consultationTimes; let i = index">
+                          <div class="row mb-3" *ngIf="i % 2 === 0">
+                            <div class="col-md-6">
+                              <button class="btn btn-primary" (click)="onTimeClick(consultationTimes[i], doctor.id)">{{consultationTimes[i]}}</button>
+                            </div>
+                            <div class="col-md-6" *ngIf="consultationTimes[i + 1]">
+                              <button class="btn btn-primary" (click)="onTimeClick(consultationTimes[i + 1], doctor.id)">{{consultationTimes[i + 1]}}</button>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

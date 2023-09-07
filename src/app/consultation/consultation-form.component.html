@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include the CSS here or in a separate file -->
+</head>
+<body class="dashboard">
+
+  <div class="header">
+    <!-- Navbar component -->
+    <app-navbar></app-navbar>
+  </div>
+
+  <div class="content-wrapper row">
+    <div class="sidebar custom-sidebar">
+      <!-- Sidebar component -->
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-content">
+      <!-- Main Content -->
+      <div class="container mt-5">
+        <h2>List of Consultations</h2>
+        <div *ngIf="consultations.length > 0; else noData">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Concerns</th>
+                <th>Doctor</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let consultation of consultations">
+                <td>{{ consultation.status }}</td>
+                <td>{{ consultation.startTime }}</td>
+                <td>{{ consultation.endTime }}</td>
+                <td>{{ consultation.concerns }}</td>
+                <td>{{consultation.doctor.firstName}}</td>
+                <button
+                (click)="openVideoCall(consultation.link)"
+                class="btn btn-warning">
+                Start Video Call
+              </button>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #noData>
+          <p>No consultations available.</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
