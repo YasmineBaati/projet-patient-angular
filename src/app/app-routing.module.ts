@@ -6,9 +6,10 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { QuestionnaireComponent } from './patient/questionnaire/questionnaire.component';
 import { PaymentComponent } from './patient/payment/payment.component';
 import { LoginComponent } from './patient/login/login.component';
-import { PrescriptionComponent } from './patient/prescription/prescription.component';
 import { AccountComponent } from './patient/account/account.component';
 import { VideoComponent } from './video/video.component';
+import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
+import { PrescriptionComponent } from './patient/prescription/prescription.component';
 
 const routes: Routes = [
   { path: 'patients/questionnaire/:id', component: QuestionnaireComponent },
@@ -17,7 +18,9 @@ const routes: Routes = [
   { path: 'patients/appointement', component: DoctorComponent },
   { path: 'patients/payment', component: PaymentComponent },
   { path: 'patients/login', component: LoginComponent },
-  { path: 'patients/documents', component: PrescriptionComponent },
+  { path: 'patients/documents', component: AllPrescriptionsComponent },
+  { path: 'patients/documents/:id', component: PrescriptionComponent },
+
   { path: 'patients/account', component: AccountComponent },
   { path: 'video/:link', component: VideoComponent }
 

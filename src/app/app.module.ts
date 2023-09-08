@@ -24,6 +24,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PrescriptionComponent } from './patient/prescription/prescription.component';
 import { AccountComponent } from './patient/account/account.component';
 import { VideoComponent } from './video/video.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
+import { RelativeTimePipe } from './relative-time-pipe/relative-time-pipe.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -42,6 +45,9 @@ import { VideoComponent } from './video/video.component';
         PrescriptionComponent,
         AccountComponent,
         VideoComponent,
+        AllPrescriptionsComponent,
+        RelativeTimePipe
+        
         
     ],
     providers: [],
@@ -57,6 +63,7 @@ import { VideoComponent } from './video/video.component';
         MatSidenavModule,
         MatListModule,
         MatIconModule,
+        QRCodeModule
     ]
 })
 export class AppModule { }

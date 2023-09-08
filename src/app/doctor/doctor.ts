@@ -1,4 +1,5 @@
 import { Consultation } from "../consultation/consultation";
+import { DoctorInformation } from "./doctor-information";
 
 export interface Doctor {
     id: number;
@@ -12,4 +13,5 @@ export interface Doctor {
     createdAt:Date;
     updatedAt:Date;
     doctorConsultations: Consultation [];
+    doctorInformation: DoctorInformation
 }

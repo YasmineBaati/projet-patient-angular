@@ -76,7 +76,7 @@ export class DoctorComponent implements OnInit {
         this.sharedService.setSelectedTime(selectedTime);
 
         console.log(selectedTime)
-        this.router.navigate([`/questionnaire/${doctorId}`]);
+        this.router.navigate([`/patients/questionnaire/${doctorId}`]);
     }
     
 }

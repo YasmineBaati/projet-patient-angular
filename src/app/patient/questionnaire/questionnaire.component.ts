@@ -144,6 +144,7 @@ export class QuestionnaireComponent {
     this.consultationService.createConsultation(this.consultationData,this.doctorId,this.patientId).subscribe(
       (response: Consultation) => {
         console.log("created cons",response);
+        this.router.navigate(['/patients/payment']);
       },
       (error : HttpErrorResponse) => {
         console.log("error",error)
@@ -151,7 +152,6 @@ export class QuestionnaireComponent {
     )
    // You can send this data to create a consultation here
     // this.consultationService.createConsultation(this.questionResponses);
-    this.router.navigate(['/payment']);
   }
 
 

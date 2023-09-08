@@ -1,0 +1,39 @@
+<div class="header">
+    <!-- Navbar component -->
+    <app-navbar></app-navbar>
+</div>
+<div class="content-wrapper row">
+
+    <div class="sidebar custom-sidebar">
+        <!-- Sidebar component -->
+        <app-sidebar></app-sidebar>
+    </div>
+    <!-- account.component.html -->
+    <div class="main-content">
+        <div class="container mt-5">
+            <div class="main-content">
+                <div class="container mt-5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Doctor's Name</th>
+                                <th>Date of Issue</th>
+                                <th>Prescription ID</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr *ngFor="let onePrescription of allPrescriptions">
+                                <td>{{onePrescription.doctor.firstName}}</td>
+                                <td>{{onePrescription.createdAt | relativeTime }}  </td>
+                                <td><a [routerLink]="['/patients/documents', onePrescription.id]">{{onePrescription.id}}</a> </td>
+                            </tr>
+                            <!-- Add more rows with data as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

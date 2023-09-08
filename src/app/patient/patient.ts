@@ -1,12 +1,15 @@
-import { Consultation } from "../consultation/consultation";
-export class Patient {
-    id?: number;
-    firstName: string="";
-    lastName: string="";
-    email: string="";
-    password: string="";
-    confirm: string=""; // confirm password
-    createdAt?: Date;
-    updatedAt?: Date;
+import { PatientInformation } from "./information/patientInformation";
+
+export interface Patient {
+    id: number;
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    confirmPassword: string, // confirm password
+    createdAt: Date,
+    updatedAt: Date
+    patientInformation: PatientInformation
+
 
 }
