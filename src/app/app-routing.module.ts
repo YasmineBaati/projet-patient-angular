@@ -7,9 +7,9 @@ import { QuestionnaireComponent } from './patient/questionnaire/questionnaire.co
 import { PaymentComponent } from './patient/payment/payment.component';
 import { LoginComponent } from './patient/login/login.component';
 import { AccountComponent } from './patient/account/account.component';
-import { VideoComponent } from './video/video.component';
 import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
 import { PrescriptionComponent } from './patient/prescription/prescription.component';
+import { ScoletteComponent } from './scolette/scolette.component';
 
 const routes: Routes = [
   { path: 'patients/questionnaire/:id', component: QuestionnaireComponent },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'patients/documents/:id', component: PrescriptionComponent },
 
   { path: 'patients/account', component: AccountComponent },
-  { path: 'video/:link', component: VideoComponent }
+  { path: 'scol', component: ScoletteComponent }
+
 
 ];
 @NgModule({

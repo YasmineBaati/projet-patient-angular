@@ -3,7 +3,6 @@ import { PrescriptionService } from '../patient/prescription/prescription.servic
 import { SessionService } from '../session/session.service';
 import { Prescription } from '../patient/prescription/prescription';
 import { HttpErrorResponse } from '@angular/common/http';
-import { RelativeTimePipe } from '../relative-time-pipe/relative-time-pipe.component';
 
 @Component({
   selector: 'app-all-prescriptions',

@@ -14,19 +14,13 @@ import { RouterOutlet } from "@angular/router";
 import { RegisterComponent } from './patient/register/register.component';
 import { QuestionnaireComponent } from './patient/questionnaire/questionnaire.component';
 import { LoginComponent } from './patient/login/login.component';
-import { DiscussionComponent } from './patient/discussion/discussion.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { PaymentComponent } from './patient/payment/payment.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PrescriptionComponent } from './patient/prescription/prescription.component';
 import { AccountComponent } from './patient/account/account.component';
-import { VideoComponent } from './video/video.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
-import { RelativeTimePipe } from './relative-time-pipe/relative-time-pipe.component';
+import { ScoletteComponent } from './scolette/scolette.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -35,18 +29,12 @@ import { RelativeTimePipe } from './relative-time-pipe/relative-time-pipe.compon
         PatientComponent,
         RegisterComponent,
         QuestionnaireComponent,
-        DiscussionComponent,
         LoginComponent,
-        DashboardComponent,
-        NavbarComponent,
-        FooterComponent,
         PaymentComponent,
-        SidebarComponent,
         PrescriptionComponent,
         AccountComponent,
-        VideoComponent,
         AllPrescriptionsComponent,
-        RelativeTimePipe
+        ScoletteComponent
         
         
     ],
