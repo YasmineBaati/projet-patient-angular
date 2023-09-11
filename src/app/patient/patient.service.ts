@@ -23,6 +23,13 @@ export class PatientService {
   updatePatient(patientId: any, updatedPatient: Patient): Observable<Patient> {
     return this.http.put<Patient>(`${this.apiUrl}/patients/${patientId}`, updatedPatient);
   }
-
+    //Get all patient 
+    getPatients(): Observable<Patient[]> {
+      return this.http.get<Patient[]>(this.apiUrl + '/patients');
+    }
+    //COUNT PATINT
+    getNumberOfPatients(): Observable<any> {
+      return this.http.get<any>(`${this.apiUrl}/patients/count`); // Replace with your API endpoint
+    }
 
 }

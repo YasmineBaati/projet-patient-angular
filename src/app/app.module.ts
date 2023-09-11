@@ -21,6 +21,9 @@ import { AccountComponent } from './patient/account/account.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
 import { ScoletteComponent } from './scolette/scolette.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
+import { SidebarAdminComponent } from './admin-dashboard/sidebar-admin/sidebar-admin.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -34,7 +37,10 @@ import { ScoletteComponent } from './scolette/scolette.component';
         PrescriptionComponent,
         AccountComponent,
         AllPrescriptionsComponent,
-        ScoletteComponent
+        ScoletteComponent,
+        AdminDashboardComponent,
+        CreateDoctorComponent,
+        SidebarAdminComponent
         
         
     ],

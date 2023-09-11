@@ -14,7 +14,7 @@
   left:0;
   top:0;
   height: 100%;
-  background:#01B99A ;
+  background:#fff ;
 }
 .sidebar-brand{
   height:10px;
@@ -47,10 +47,10 @@
   padding-right: 1rem;
 }
 .sidebar-menu a.active{
-  background:#fff;
+  background:#01B99A;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: #01B99A;
+  color: #fff;
   border-radius: 30px 0px 0px 30px;
   margin-right: 50px;
   border: 1px solid #ccc;
@@ -107,26 +107,72 @@ header label span {
   display: inline-block;
   color: #000000;
 }
-/* Part2 */
-/* Updated CSS to align content to the regular position */
+/* Part2*/
+.statistics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding for larger cards */
+  margin: 10px;
+  width: 400px; /* Increased card width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; /* Center the content */
+}
+
+.statistics-card i {
+  font-size: 60px; /* Adjusted icon size */
+  color: #008b76;
+  margin-right: 20px; /* Added margin for spacing */
+}
+
+.statistics-content {
+  text-align: left; /* Align content to the left */
+}
+
+.statistics-number {
+  color: #000; /* Solid black */
+  font-size: 48px; /* Adjusted font size */
+  margin: 0;
+}
+
+.statistics-label {
+  color: #777; /* Grey color */
+  font-size: 24px; /* Adjusted font size */
+  margin: 0;
+}
+/* Part3;dr*/
+/* Updated CSS with horizontal border lines in grey */
 .left-align {
   text-align: left;
   margin-left: -280px; /* Adjust margin as needed */
 }
 
-table.table-striped {
+.table-striped {
   width: 80%; /* Set the width to 200% to make it 2x larger */
   border-collapse: collapse;
   background-color: white; /* Set background of the table to white */
 }
 
-table.table-striped th, table.table-striped td {
+.table-striped th, .table-striped td {
   padding: 10px;
   text-align: left;
   color: #333; /* Set text color to light grey */
+  border-bottom: 1px solid #ccc; /* Add grey border to the bottom of table cells */
 }
 
-/* Optional: You can use a similar button style as before */
+.table-striped tr:last-child th,
+.table-striped tr:last-child td {
+  border-bottom: none; /* Remove border from the last row */
+}
+
 .btn-success {
   background-color: #008b76;
   color: white;
@@ -139,6 +185,7 @@ table.table-striped th, table.table-striped td {
 .btn-success:hover {
   background-color: #006b5a;
 }
+
 h2 {
   color: #333;
   border-bottom: 2px solid #01B99A;
@@ -147,7 +194,62 @@ h2 {
   margin-bottom: 20px;
   font-size: 24px;
 }
-.btn{
+
+.btn {
+  background-color: #006b5a;
+  color: white;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+}
+/* Part3;pt*/
+/* Updated CSS with horizontal border lines in grey for patients' table */
+.left-align {
+  text-align: left;
+  margin-left: -280px; /* Adjust margin as needed */
+}
+
+.table-striped {
+  width: 80%; /* Set the width to 200% to make it 2x larger */
+  border-collapse: collapse;
+  background-color: white; /* Set background of the table to white */
+}
+
+.table-striped th, .table-striped td {
+  padding: 10px;
+  text-align: left;
+  color: #333; /* Set text color to light grey */
+  border-bottom: 1px solid #ccc; /* Add grey border to the bottom of table cells */
+}
+
+.table-striped tr:last-child th,
+.table-striped tr:last-child td {
+  border-bottom: none; /* Remove border from the last row */
+}
+
+.btn-success {
+  background-color: #008b76;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #006b5a;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 2px solid #01B99A;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.btn {
   background-color: #006b5a;
   color: white;
   width: 60px;

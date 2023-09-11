@@ -10,6 +10,8 @@ import { AccountComponent } from './patient/account/account.component';
 import { AllPrescriptionsComponent } from './all-prescriptions/all-prescriptions.component';
 import { PrescriptionComponent } from './patient/prescription/prescription.component';
 import { ScoletteComponent } from './scolette/scolette.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
 
 const routes: Routes = [
   { path: 'patients/questionnaire/:id', component: QuestionnaireComponent },
@@ -22,7 +24,15 @@ const routes: Routes = [
   { path: 'patients/documents/:id', component: PrescriptionComponent },
 
   { path: 'patients/account', component: AccountComponent },
-  { path: 'scol', component: ScoletteComponent }
+  { path: 'scol', component: ScoletteComponent },
+  { path: 'admin', component: AdminDashboardComponent},
+  { path: 'admin/doctors', component: AdminDashboardComponent },
+
+{ path: 'admin', component: AdminDashboardComponent },
+{ path: 'admin/patients', component: AdminDashboardComponent },
+{ path: 'admin/stats', component: AdminDashboardComponent },
+{ path: 'add-doctor', component: CreateDoctorComponent }
+
 
 
 ];

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+<body>
+ <div class="sidebar">
+  <div class="sidebar-brand">
+    <img class="im" src="../../assets/img/logo2.png" alt="">
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+        <li>
+            <a class="active" routerLink="/admin/stats">
+              <i class="las la-chart-line"></i>
+              <span class="nav-item">Statistics</span>
+            </a>
+        </li>
+          <li>
+            <a class="active" routerLink="/admin/patients">
+              <i class="las la-user"></i>
+              <span class="nav-item">Patients</span>
+              </a>
+          </li>
+          <li>
+              <a class="active" routerLink="/admin/doctors">
+                <i class="las la-user-tie"></i>
+                <span class="nav-item">Doctors</span>
+              </a>
+          </li>
+          <li>
+             <a class="active" (click)="goToAddDoctorForm()">
+             <i class="las la-user-plus"></i>
+             <span class="nav-item">New Doctor</span>
+             </a>    
+          </li>
+      </ul>
+  </div>
+ </div>
+ <div class="main-content">
+  <header>
+    <h1>
+      <label for="">
+      <span class="las la-chart-line"></span>
+      </label>
+      Statistics
+    </h1>
+    <div class="search-wrapper">
+      <span class="las la-search"></span>
+      <input type="search" placeholder="Search here"/>
+    </div>
+    <div class="user-wrapper">
+      <img src="../../assets/img/user.png" width="40px" height="40px" alt="">
+      <div>
+        <h4>Hello,</h4>
+        <h5>Doctor Name</h5>
+      </div>
+    </div>
+  </header>
+  <main>
+        <div class="main-content">
+          <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div class="statistics-container">
+              <div class="statistics-container">
+                <div class="statistics-card">
+                  <i class="las la-user"></i>
+                  <div class="statistics-content">
+                    <p class="statistics-number" *ngIf="numberOfPatients !== undefined">{{ numberOfPatients }}</p>
+                    <p class="statistics-label">Patients</p>
+                  </div>
+                </div>
+              
+                <div class="statistics-card">
+                  <i class="las la-user-tie"></i>
+                  <div class="statistics-content">
+                    <p class="statistics-number" *ngIf="numberOfDoctors !== undefined">{{ numberOfDoctors }}</p>
+                    <p class="statistics-label">Doctors</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>  
+            <div *ngIf="patients.length > 0" class="left-align">
+              <h2>Consulta Patient's </h2>
+              <table class="table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let patient of patients">
+                    <td>{{ patient.id }}</td>
+                    <td>{{ patient.firstName }}</td>
+                    <td>{{ patient.email }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div *ngIf="doctors.length > 0" class="left-align">
+              <h2>Consulta Doctor's</h2>
+              <table class="table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let doctor of doctors">
+                    <td>{{ doctor.id }}</td>
+                    <td>{{ doctor.firstName }}</td>
+                    <td>{{ doctor.proficiency }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+          </div>
+        </div>
+  </main>    
+ </div>
+</body>
+</html>
+
+
+
