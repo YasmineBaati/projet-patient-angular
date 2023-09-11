@@ -57,7 +57,7 @@ li{
 }
 li a{
   font-size: 16px;
-  color: rgb(85, 83, 83);
+  color: #333
 }
 
 nav i{
@@ -83,7 +83,7 @@ nav i{
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgb(43, 43, 43);
+  color: #333
   margin-right: -20px;
 }
 .main-body{

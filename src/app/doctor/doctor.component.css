@@ -52,6 +52,10 @@
   padding-bottom: 1rem;
   color: #01B99A;
   border-radius: 30px 0px 0px 30px;
+  margin-right: 50px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding-right: -90px;
 
 }
 .main-content{
@@ -104,3 +108,113 @@ header label span {
   color: #000000;
 }
 /* Part2 */
+/* styles.css */
+/* styles.css */
+/* Part2 */
+/* styles.css */
+/* styles.css */
+.main {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  text-align: left; /* Align text to the left */
+  margin-left: 60px; 
+  margin-top: 20px; 
+}
+
+.table {
+  width: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  background-color: white;
+  border: none;
+  text-align: left; /* Align text to the left */
+  padding: 10px;
+  width: 100px;
+}
+
+tr {
+  background-color: white;
+  width: 80px;
+
+}
+
+td {
+  padding: 10px;
+  text-align: left; /* Align text to the left */
+  vertical-align: middle;
+}
+
+.user-image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.user-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.user-subhead {
+  color: #777;
+  display: block;
+  font-size: 90%;
+}
+
+.user-email {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #008b76;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.small-btn {
+  padding: 3px 6px;
+  width: 50px; /* Adjust button width to make them smaller */
+}
+
+.btn-primary:hover {
+  background-color: #006f5c;
+}
+
+/* Add this to style vertical alignment of consultation times */
+.consultation-times {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left; /* Align text to the left */
+}
+
+.small-btn {
+  margin: 5px;
+}
+
+h2 {
+  color: #333;
+  border-bottom: 2px solid #01B99A;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: left;
+}
+.light-grey-text{
+  width: 250px;
+}
+.table-responsive{
+  margin-right: 20px;
+}

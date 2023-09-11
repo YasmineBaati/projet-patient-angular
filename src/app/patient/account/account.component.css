@@ -132,10 +132,12 @@ main {
 }
 
 h2 {
-  color: #333; /* Darker text color */
+  color: #333;
   border-bottom: 2px solid #01B99A;
+  display: inline-block;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .form-group {
@@ -143,12 +145,12 @@ h2 {
 }
 
 label {
-  color: darkgrey;
+  color: #333;
 }
 
 .form-control {
   border: none;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid #333;
   padding: 10px;
   width: 600px; /* Make the input fields 3 times wider */
 }
@@ -161,6 +163,6 @@ label {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  background-color: #008b76;
+.btn-primary {
+  background-color: #006b5a;
 }

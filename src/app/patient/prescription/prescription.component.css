@@ -1,91 +1,187 @@
-/*  import google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-*{
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* Part1 */
+* {
   padding: 0;
-  outline: none;
-  border: none;
-  text-decoration: none;
-  list-style: none;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+} 
+.sidebar{
+  width: 345px;
+  position: fixed;
+  left:0;
+  top:0;
+  height: 100%;
+  background:#01B99A ;
 }
-body{
-  background: rgb(233, 233, 233);
-}
-.container{
-  display: flex;
-  width: 1200px;
- margin-right:  0;
-}
-nav{
-  position: sticky;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 280px;
-  height: 110vh;
-  background: #fff;
-}
-.navbar{
-  width: 80%;
-  margin-left: 50px;
-  margin-right:50px
-}
+.sidebar-brand{
+  height:10px;
+  margin-bottom: 150px;
+  margin-left: 60px;
 
-.logo{
-  margin: 2rem 0 1rem 0;
-  padding-bottom: 3rem;
+}
+.im{
+  width:150px;
+  height: 150px;
+  
+}
+.sidebar-menu{
+  margin-top: 1rem;
+}
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: 1.7rem;
+  padding-left: 1rem;
+
+}
+.sidebar-menu a {
+  padding-left: 1rem;
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.sidebar-menu a span :first-child {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+.sidebar-menu a.active{
+  background:#fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #01B99A;
+  border-radius: 30px 0px 0px 30px;
+  margin-right: 50px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding-right: -90px;
+
+}
+.main-content{
+  margin-left: 345px;
+
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+header h1 {
+  color: #222;
+}
+header label span {
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+.search-wrapper{
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
+
 }
-.logo img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.search-wrapper span {
+  display: inline-block;
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
 }
-.logo h1{
-  margin-left: 1rem;
-  text-transform: uppercase;
+.search-wrapper input{
+  height: 100%;
+  padding: .5rem;
+  border: none;
+  outline: none;
+}
+.user-wrapper{
+  display: flex;
+  align-items: center;
+
+}
+.user-wrapper img {
+  margin-right: 2rem;
+}
+.user-wrapper small {
+  display: inline-block;
+  color: #000000;
+}
+/* Part2 */
+/* CSS for the provided HTML structure */
+.left-align {
+  text-align: left;
+  margin-left: -370px; /* Adjust margin as needed */
 }
 
-ul{
-  margin: 0 auto;
-}
-li{
-  padding-bottom: 2rem;
-}
-li a{
-  font-size: 16px;
-  color: rgb(85, 83, 83);
+.card {
+  max-width: 800px; /* Adjust the width as needed */
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px;
+  background-color: white;
 }
 
-nav i{
-  width: 50px;
-  font-size: 18px;
-  text-align: center;
-}
-
-.logout{
-  position: absolute;
-  bottom: 20px;
-}
-
-/* Main Section */
-.main{
-  width: 100%;
-}
-.main-top{
-  width: 1078px;
-  background: #fff;
+.card-header {
+  background-color: #01B99A;
+  color: white;
   padding: 10px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgb(43, 43, 43);
-  margin-right: -20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
-.main-body{
-  padding: 10px 10px 10px 20px;
+
+.card-body {
+  padding: 20px;
+  position: relative;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+p {
+  color: #333;
+  margin: 0;
+}
+
+.prescription-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.patient-info,
+.medication-info,
+.doctor-info {
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.print-button-container {
+  text-align: right;
+}
+
+.print-button {
+  background-color: #01B99A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background-color: #008b76;
 }

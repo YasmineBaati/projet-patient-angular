@@ -58,36 +58,37 @@
       </div>
     </div>
   </header>
-  <main>
+  <main class="left-align">
     <section class="main">
       <div class="main-body">
-          <div class="main-content">
-              <div class="container mt-5">
-                  <div class="main-content">
-                      <div class="container mt-5">
-                          <table class="table">
-                              <thead>
-                                  <tr>
-                                      <th>Doctor's Name</th>
-                                      <th>Date of Issue</th>
-                                      <th>Prescription ID</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr *ngFor="let onePrescription of allPrescriptions">
-                                      <td>{{onePrescription.doctor.firstName}}</td>
-                                      <td>{{onePrescription.createdAt  }}  </td>
-                                      <td><a [routerLink]="['/patients/documents', onePrescription.id]">{{onePrescription.id}}</a> </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-              </div>
+        <div class="main-content">
+          <div class="container mt-5">
+            <h2>Document's List</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="light-grey-text">Doctor's Name</th>
+                  <th class="light-grey-text">Date of Issue</th>
+                  <th class="green-text center-align">Prescriptions </th> <!-- Updated class and alignment -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let onePrescription of allPrescriptions">
+                  <td class="light-grey-text">{{ onePrescription.doctor.firstName }}</td>
+                  <td class="light-grey-text">{{ onePrescription.createdAt | date: 'yyyy-MM-dd' }}</td>
+                  <td class="green-text center-align"> <!-- Updated class and alignment -->
+                    <a [routerLink]="['/patients/documents', onePrescription.id]">
+                      <button class="btn">view</button>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
       </div>
-  </section>
-  </main>
+    </section>
+  </main>  
  </div>
 </body>
 </html>

@@ -58,45 +58,47 @@
       </div>
     </div>
   </header>
-  <main>
+  <main class="left-align">
     <div class="main-content">
       <!-- Main Content -->
       <div class="container mt-5">
-        <h2>List of Consultations</h2>
+        <h2>Consultations List</h2>
         <div *ngIf="consultations.length > 0; else noData">
-          <table class="table table-striped">
+          <table class="table table-striped user-list">
             <thead>
               <tr>
-                <th>Status</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Concerns</th>
-                <th>Doctor</th>
-                <th>Link</th>
+                <th class="light-grey-text">Status</th>
+                <th class="light-grey-text">Start Time</th>
+                <th class="light-grey-text">End Time</th>
+                <th class="light-grey-text">Concerns</th>
+                <th class="light-grey-text">Doctor</th>
+                <th class="light-grey-text">Link</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let consultation of consultations">
-                <td>{{ consultation.status }}</td>
-                <td>{{ consultation.startTime }}</td>
-                <td>{{ consultation.endTime }}</td>
-                <td>{{ consultation.concerns }}</td>
-                <td>{{consultation.doctor.firstName}}</td>
-                <button
-                (click)="openVideoCall(consultation.link)"
-                class="btn btn-warning">
-                Start Video Call
-              </button>
-            </tr>
+                <td class="light-grey-text">{{ consultation.status }}</td>
+                <td class="light-grey-text">{{ consultation.startTime | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+                <td class="light-grey-text">{{ consultation.endTime | date: 'yyyy-MM-dd HH:mm:ss' }}</td>
+                <td class="light-grey-text">{{ consultation.concerns }}</td>
+                <td class="light-grey-text">{{ consultation.doctor.firstName }}</td>
+                <td>
+                  <button
+                    (click)="openVideoCall(consultation.link)"
+                    class="btn btn-success">
+                    Start Video Call
+                  </button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
         <ng-template #noData>
-          <p>No consultations available.</p>
+          <p class="light-grey-text">No consultations available.</p>
         </ng-template>
       </div>
     </div>
-  </main>
+  </main>   
  </div>
 </body>
 </html>
