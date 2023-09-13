@@ -30,7 +30,7 @@
               </a>
           </li>
           <li>
-             <a class="active" routerLink="/admin/add-doctor">
+            <a class="active" routerLink="/admin/add-doctor">
              <i class="las la-user-plus"></i>
              <span class="nav-item">New Doctor</span>
              </a>    
@@ -42,9 +42,9 @@
   <header>
     <h1>
       <label for="">
-      <span class="las la-chart-line"></span>
+      <span class="las la-user"></span>
       </label>
-      Statistics
+      Patients
     </h1>
     <div class="search-wrapper">
       <span class="las la-search"></span>
@@ -58,32 +58,29 @@
       </div>
     </div>
   </header>
-  <main>
-        <div class="main-content">
-          <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="statistics-container">
-              <div class="statistics-container">
-                <div class="statistics-card">
-                  <i class="las la-user"></i>
-                  <div class="statistics-content">
-                    <p class="statistics-number" *ngIf="numberOfPatients !== undefined">{{ numberOfPatients }}</p>
-                    <p class="statistics-label">Patients</p>
-                  </div>
-                </div>
-              
-                <div class="statistics-card">
-                  <i class="las la-user-tie"></i>
-                  <div class="statistics-content">
-                    <p class="statistics-number" *ngIf="numberOfDoctors !== undefined">{{ numberOfDoctors }}</p>
-                    <p class="statistics-label">Doctors</p>
-                  </div>
-                </div>
-              </div>
-              
-            </div>  
-            
-          </div>
-        </div>
+  <main>  
+            <div *ngIf="patients.length > 0" class="left-align">
+              <h2>Consulta Patient's </h2>
+              <table class="table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let patient of patients">
+                    <td>{{ patient.id }}</td>
+                    <td>{{ patient.firstName }}</td>
+                    <td>{{ patient.lastName }}</td>
+                    <td>{{ patient.email }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>   
   </main>    
  </div>
 </body>

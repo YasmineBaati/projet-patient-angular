@@ -24,6 +24,9 @@ import { ScoletteComponent } from './scolette/scolette.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
 import { SidebarAdminComponent } from './admin-dashboard/sidebar-admin/sidebar-admin.component';
+import { AdminDoctorComponent } from './admin-dashboard/admin-doctor/admin-doctor.component';
+import { AdminPatientComponent } from './admin-dashboard/admin-patient/admin-patient.component';
+import { AdminStatComponent } from './admin-dashboard/admin-stat/admin-stat.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -40,7 +43,10 @@ import { SidebarAdminComponent } from './admin-dashboard/sidebar-admin/sidebar-a
         ScoletteComponent,
         AdminDashboardComponent,
         CreateDoctorComponent,
-        SidebarAdminComponent
+        SidebarAdminComponent,
+        AdminDoctorComponent,
+        AdminPatientComponent,
+        AdminStatComponent,
         
         
     ],

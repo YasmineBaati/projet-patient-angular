@@ -12,6 +12,8 @@ import { PrescriptionComponent } from './patient/prescription/prescription.compo
 import { ScoletteComponent } from './scolette/scolette.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CreateDoctorComponent } from './admin-dashboard/create-doctor/create-doctor.component';
+import { AdminPatientComponent } from './admin-dashboard/admin-patient/admin-patient.component';
+import { AdminDoctorComponent } from './admin-dashboard/admin-doctor/admin-doctor.component';
 
 const routes: Routes = [
   { path: 'patients/questionnaire/:id', component: QuestionnaireComponent },
@@ -25,13 +27,13 @@ const routes: Routes = [
 
   { path: 'patients/account', component: AccountComponent },
   { path: 'scol', component: ScoletteComponent },
-  { path: 'admin', component: AdminDashboardComponent},
-  { path: 'admin/doctors', component: AdminDashboardComponent },
+  
+ 
 
-{ path: 'admin', component: AdminDashboardComponent },
-{ path: 'admin/patients', component: AdminDashboardComponent },
-{ path: 'admin/stats', component: AdminDashboardComponent },
-{ path: 'add-doctor', component: CreateDoctorComponent }
+{ path: 'admin/statistics', component: AdminDashboardComponent },
+{ path: 'admin/patients', component: AdminPatientComponent },
+{ path: 'admin/doctors', component: AdminDoctorComponent },
+{ path: 'admin/add-doctor', component: CreateDoctorComponent }
 
 
 

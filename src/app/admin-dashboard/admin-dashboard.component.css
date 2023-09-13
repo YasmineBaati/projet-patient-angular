@@ -15,6 +15,7 @@
   top:0;
   height: 100%;
   background:#fff ;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .sidebar-brand{
   height:10px;
@@ -60,6 +61,7 @@
 }
 .main-content{
   margin-left: 345px;
+  
 
 }
 header{
@@ -112,10 +114,12 @@ header label span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left:-230px ;
+  margin-top: 23px;
 }
 
 .statistics-card {
-  background-color: #fff;
+  background-color: #f5f2f2;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 30px; /* Increased padding for larger cards */

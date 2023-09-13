@@ -1,71 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Main container styles */
-main {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: 30px;
-}
-
-.main-body {
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #01B99A;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    color: #333;
-}
-
-.form-control {
-    border: none;
-    border-bottom: 1px solid #333;
-    padding: 10px;
-    width: 200%;
-}
-
-.btn-primary {
-    background-color: #01B99A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color: #006b5a;
-  }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 /* Part1 */
 * {
   padding: 0;
@@ -274,8 +207,8 @@ h2 {
 /* Part3;pt*/
 /* Updated CSS with horizontal border lines in grey for patients' table */
 main{
-margin-left: -70px;
-margin-top: 80px;
+margin-left: 340px;
+margin-top: 50px;
 }
 .left-align {
   text-align: left;
@@ -323,10 +256,9 @@ h2 {
 }
 
 .btn {
-  background-color: #01B99A;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
   background-color: #006b5a;
+  color: white;
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
 }
